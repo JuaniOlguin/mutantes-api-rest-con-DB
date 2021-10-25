@@ -34,7 +34,7 @@ public class RegistroDnaServiceImpl extends BaseServiceImpl<RegistroDna, Long> i
                 return true;
             } else {
                 registroDnaRepository.save(new RegistroDna(dna.getDna(), false));
-                throw new Exception();
+                return false;
             }
         } catch (Exception e){
             throw new Exception(e.getMessage());
