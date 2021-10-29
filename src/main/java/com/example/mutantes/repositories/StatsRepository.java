@@ -1,11 +1,9 @@
 package com.example.mutantes.repositories;
 
-import com.example.mutantes.entities.RegistroDna;
 import com.example.mutantes.entities.Stats;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
-import java.util.List;
 
 @Repository
 public interface StatsRepository extends BaseRepository<Stats, Long>{

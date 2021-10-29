@@ -21,12 +21,16 @@ public class StatsServiceImpl extends BaseServiceImpl<Stats, Long> implements St
     @Override
     @Transactional
     public Stats calcularStats() throws Exception{
-        Stats stats = new Stats();
-        stats.setMutantCount(statsRepository.searchMutants());
-        stats.setNonMutantCount(statsRepository.searchNonMutants());
-        if(stats.getNonMutantCount() > 0)stats.setMutantRatio(stats.getMutantCount()/stats.getNonMutantCount());
-        stats.setStatsDate(LocalDateTime.now());
-        statsRepository.save(stats);
-        return stats;
+        try {
+            Stats stats = new Stats();
+            stats.setMutantCount(statsRepository.searchMutants());
+            stats.setNonMutantCount(statsRepository.searchNonMutants());
+            if (stats.getNonMutantCount() > 0) stats.setMutantRatio(stats.getMutantCount() / stats.getNonMutantCount());
+            stats.setStatsDate(LocalDateTime.now());
+            statsRepository.save(stats);
+            return stats;
+        }catch(Exception e){
+            throw new Exception(e.getMessage());
+        }
     }
 }
