@@ -24,9 +24,9 @@ https://dashboard.heroku.com/apps/mutantes-app-tpa
 - Test de Estres con JMeter
 - Heroku
 
-# Acceso al Deploy de Heroku
+## Acceso al Deploy de Heroku
 
-## Encontrar mutante (usando postman para hacer el post de un array de strings)
+### Encontrar mutante (usando postman para hacer el post de un array de strings)
 - Metodo POST
 - https://mutantes-app-tpa.herokuapp.com/api/tpa/mutant/ 
 
@@ -44,14 +44,14 @@ Ejemplo de entrada:
 
 Esta petición debería devolver el status 200 (OK) si encuentra mutante o el estado 403 (FORBIDDEN) si no encuentra un mutante
 
-## Traer todos los registros de ADN de la base de datos
+### Traer todos los registros de ADN de la base de datos
 https://mutantes-app-tpa.herokuapp.com/api/tpa/ 
 
-## Calcular estadísticas
+### Calcular estadísticas
 https://mutantes-app-tpa.herokuapp.com/api/tpa/stats/calcular/ 
 
-## Trae todas las estadísticas calculadas historicamente
+### Trae todas las estadísticas calculadas historicamente
 https://mutantes-app-tpa.herokuapp.com/api/tpa/stats/ 
 
-## Trae todos los registros ingresados a la base de datos
+### Trae todos los registros ingresados a la base de datos
 https://mutantes-app-tpa.herokuapp.com/api/tpa/
