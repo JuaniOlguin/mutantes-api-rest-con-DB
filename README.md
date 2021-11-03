@@ -1,11 +1,11 @@
 # Desafio Mercado Libre
 
 ## Integrantes del Grupo
--Daibes Juan Ignacio
--Guevara Florencia
--Lee Angela
--Noseda Santiago
--Olguin Juan Ignacio
+- Daibes Juan Ignacio
+- Guevara Florencia
+- Lee Angela
+- Noseda Santiago
+- Olguin Juan Ignacio
 
 ## Link Repositorio de Github
 https://github.com/JuaniOlguin/mutantes-api-rest-con-DB
