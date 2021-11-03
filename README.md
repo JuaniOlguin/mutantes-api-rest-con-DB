@@ -21,7 +21,8 @@ https://dashboard.heroku.com/apps/mutantes-app-tpa
 - Spring Boot
 - MySQL
 - JPA y Hibernate
-- Test de Estres con JMeter
+- JMeter
+- JUnit 
 - Heroku
 
 ## Acceso al Deploy de Heroku
