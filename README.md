@@ -36,7 +36,7 @@ https://dashboard.heroku.com/apps/mutantes-app-tpa
 
 ### Encontrar mutante (usando postman para hacer el post de un array de strings)
 - Metodo POST
-- https://mutantes-app-tpa.herokuapp.com/api/tpa/mutant/ 
+- https://mutantes-app-tpa.herokuapp.com/api/v1/tpa/mutant/ 
 
 Ejemplo de entrada: 
 {
@@ -53,13 +53,13 @@ Ejemplo de entrada:
 Esta petición debería devolver el status 200 (OK) si encuentra mutante o el estado 403 (FORBIDDEN) si no encuentra un mutante
 
 ### Traer todos los registros de ADN de la base de datos
-https://mutantes-app-tpa.herokuapp.com/api/tpa/ 
+https://mutantes-app-tpa.herokuapp.com/api/v1/tpa/ 
 
 ### Calcular estadísticas
-https://mutantes-app-tpa.herokuapp.com/api/tpa/stats/calcular/ 
+https://mutantes-app-tpa.herokuapp.com/api/v1/tpa/stats/calcular/ 
 
 ### Trae todas las estadísticas calculadas historicamente
-https://mutantes-app-tpa.herokuapp.com/api/tpa/stats/ 
+https://mutantes-app-tpa.herokuapp.com/api/v1/tpa/stats/ 
 
 ### Trae todos los registros ingresados a la base de datos
-https://mutantes-app-tpa.herokuapp.com/api/tpa/
+https://mutantes-app-tpa.herokuapp.com/api/v1/tpa/
