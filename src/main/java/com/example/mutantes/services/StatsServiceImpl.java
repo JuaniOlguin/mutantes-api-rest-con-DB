@@ -1,6 +1,7 @@
 package com.example.mutantes.services;
 
 import com.example.mutantes.entities.Stats;
+import com.example.mutantes.exceptions.DivisionByZeroException;
 import com.example.mutantes.repositories.BaseRepository;
 import com.example.mutantes.repositories.StatsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,7 +26,11 @@ public class StatsServiceImpl extends BaseServiceImpl<Stats, Long> implements St
             Stats stats = new Stats();
             stats.setMutantCount(statsRepository.searchMutants());
             stats.setNonMutantCount(statsRepository.searchNonMutants());
-            if (stats.getNonMutantCount() > 0) stats.setMutantRatio(stats.getMutantCount() / stats.getNonMutantCount());
+            if (stats.getNonMutantCount() > 0) {
+                stats.setMutantRatio(stats.getMutantCount() / stats.getNonMutantCount());
+            }else{
+                throw new DivisionByZeroException("No se puede calcular el ratio porque el numero de no-mutantes es 0");
+            }
             stats.setStatsDate(LocalDateTime.now());
             statsRepository.save(stats);
             return stats;

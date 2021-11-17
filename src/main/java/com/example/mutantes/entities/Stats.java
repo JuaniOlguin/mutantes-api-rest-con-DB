@@ -1,9 +1,6 @@
 package com.example.mutantes.entities;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
@@ -13,8 +10,7 @@ import java.time.LocalDateTime;
 @Table(name = "stats")
 @NoArgsConstructor
 @AllArgsConstructor
-@Setter
-@Getter
+@Data
 public class Stats extends Base{
 
     @Column(name = "mutantCount")

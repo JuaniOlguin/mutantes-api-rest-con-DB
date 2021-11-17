@@ -1,5 +1,6 @@
 package com.example.mutantes.matriz;
 
+import com.example.mutantes.exceptions.NonSquareMatrixException;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
@@ -11,16 +12,25 @@ import java.util.Random;
 @Getter
 public class MatrixCreator {
 
-    public char[][]hacerMatriz(String[] dna){
+    public char[][]hacerMatriz(String[] dna) throws NonSquareMatrixException {
         //convierte el array de strings en una matriz de caracteres
-        int n = dna.length;
-        char[][] dnaMatriz = new char[n][n];
-        for (int i = 0; i < n; ++i) {
-            for (int j = 0; j < n; ++j) {
-                dnaMatriz[i][j] = dna[i].charAt(j % n);
+        try {
+            if(dna.length == dna[0].length()){
+                int n = dna.length;
+                char[][] dnaMatriz = new char[n][n];
+                for (int i = 0; i < n; ++i) {
+                    for (int j = 0; j < n; ++j) {
+                        dnaMatriz[i][j] = dna[i].charAt(j % n);
+                    }
+                }
+                return dnaMatriz;
+            }else{
+                throw new NonSquareMatrixException("La matriz ingresada no es cuadrada");
             }
+
+        }catch(NonSquareMatrixException e){
+            throw new NonSquareMatrixException(e.getMessage());
         }
-        return dnaMatriz;
     }
     //metodo sobrecargado
     public char[][] hacerMatriz(int n){

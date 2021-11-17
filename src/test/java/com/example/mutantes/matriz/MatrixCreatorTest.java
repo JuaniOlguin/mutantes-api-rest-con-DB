@@ -1,5 +1,6 @@
 package com.example.mutantes.matriz;
 
+import com.example.mutantes.exceptions.NonSquareMatrixException;
 import org.junit.jupiter.api.*;
 
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
@@ -29,8 +30,13 @@ public class MatrixCreatorTest {
             {'T', 'G', 'G', 'G', 'G'},
             {'T', 'A', 'A', 'A', 'A'}
         };
-        char[][] matrizTest = matrixCreator.hacerMatriz(array);
-        Assertions.assertArrayEquals(matriz, matrizTest);
+        try {
+            char[][] matrizTest = matrixCreator.hacerMatriz(array);
+            Assertions.assertArrayEquals(matriz, matrizTest);
+        }catch (NonSquareMatrixException e){
+
+        }
+
     }
     @Test
     @Order(2)
