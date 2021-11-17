@@ -1,12 +1,12 @@
 package com.example.mutantes.matriz;
 
 import lombok.AllArgsConstructor;
+import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
 @AllArgsConstructor
-@Getter
-@Setter
+@Data
 public class MutantDetector {
     private HintSearch search;
 

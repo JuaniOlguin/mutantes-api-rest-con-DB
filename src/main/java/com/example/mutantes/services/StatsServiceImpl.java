@@ -26,6 +26,7 @@ public class StatsServiceImpl extends BaseServiceImpl<Stats, Long> implements St
             Stats stats = new Stats();
             stats.setMutantCount(statsRepository.searchMutants());
             stats.setNonMutantCount(statsRepository.searchNonMutants());
+            //el calculo solo se realizara si la cantidad de no-mutantes es mayor a 0
             if (stats.getNonMutantCount() > 0) {
                 stats.setMutantRatio(stats.getMutantCount() / stats.getNonMutantCount());
             }else{

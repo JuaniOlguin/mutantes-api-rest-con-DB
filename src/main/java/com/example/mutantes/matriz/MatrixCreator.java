@@ -2,16 +2,16 @@ package com.example.mutantes.matriz;
 
 import com.example.mutantes.exceptions.NonSquareMatrixException;
 import lombok.AllArgsConstructor;
+import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
 import java.util.Random;
 
 @AllArgsConstructor
-@Setter
-@Getter
+@Data
 public class MatrixCreator {
-
+    //solo funciona si la matriz es cuadrada, anteriormente no realizaba ningun throw
     public char[][]hacerMatriz(String[] dna) throws NonSquareMatrixException {
         //convierte el array de strings en una matriz de caracteres
         try {

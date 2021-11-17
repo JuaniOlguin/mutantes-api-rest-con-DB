@@ -1,12 +1,12 @@
 package com.example.mutantes.matriz;
 
+import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @NoArgsConstructor
-@Getter
-@Setter
+@Data
 public class HintSearch {
     private HintAnalizer hintAnalizer = new HintAnalizer();
     private int contador = 0; //nos dice cuantas hints encontradas son una secuencia de adn correcta, verificada por HintAnalizer
