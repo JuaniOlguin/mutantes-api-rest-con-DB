@@ -23,7 +23,7 @@ public class RegistroDnaController extends BaseControllerImpl<RegistroDna, Regis
                 return ResponseEntity.status(HttpStatus.FORBIDDEN).body("{\"mutant\":\"Mutante no encontrado.\"}");
             }
         }catch(Exception e){
-            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("{\"error\":\"\""+e.getMessage()+"\"}"); //msj de error en JSON
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("{\"error\":\""+e.getMessage()+"\"}"); //msj de error en JSON
         }
     }
 }
