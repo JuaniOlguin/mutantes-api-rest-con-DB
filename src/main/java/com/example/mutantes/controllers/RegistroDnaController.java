@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @CrossOrigin(origins = "*") //permitir el acceso a la api desde distintos clientes
-@RequestMapping(path = "api/tpa") //la uri que necesitamos para acceder a los recursos, personas es el recurso en este caso
+@RequestMapping(path = "api/v1/tpa") //la uri que necesitamos para acceder a los recursos, personas es el recurso en este caso
 public class RegistroDnaController extends BaseControllerImpl<RegistroDna, RegistroDnaServiceImpl>{
     @Autowired
     RegistroDnaServiceImpl registroDnaService;

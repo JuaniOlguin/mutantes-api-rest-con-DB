@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @CrossOrigin(origins = "*")
-@RequestMapping(path = "api/tpa/stats")
+@RequestMapping(path = "api/v1/tpa/stats")
 public class StatsController extends BaseControllerImpl<Stats, StatsServiceImpl>{
     @Autowired
     StatsServiceImpl statsService;
@@ -19,7 +19,7 @@ public class StatsController extends BaseControllerImpl<Stats, StatsServiceImpl>
         try{
             return ResponseEntity.status(HttpStatus.OK).body(statsService.calcularStats());
         }catch(Exception e){
-            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("{\"error\":\"Error.Intente mas tarde.\"}"); //msj de error en JSON
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage()); //msj de error en JSON
         }
     }
 }
