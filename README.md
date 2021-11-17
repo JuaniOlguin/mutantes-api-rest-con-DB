@@ -16,7 +16,7 @@ https://github.com/JuaniOlguin/mutantes-api-rest-con-DB.git
 ## Link del Deploy en Heroku
 https://dashboard.heroku.com/apps/mutantes-app-tpa
 
-##Correcciones agregadas luego de la primer entrega
+## Correcciones agregadas luego de la primer entrega
 - Agregadas dos excepciones custom:
     - NonSquareMatrixException : aparece si la matriz que recibe RegistroDnaController no es cuadrada.
     - DivisionByZeroException : aparece si al calcular estadisticas, no hay no-mutantes registrados previamente.
